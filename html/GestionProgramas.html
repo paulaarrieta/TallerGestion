@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Programas Académicos</title>
+  <link rel="stylesheet" href="../css/styles2.css">
+</head>
+<body>
+  <h1>Registro de Programas Académicos</h1>
+  
+  <form id="programForm">
+    <label for="programCode">Código del Programa (Alfanumérico):</label>
+    <input type="text" id="programCode" required pattern="[A-Za-z0-9]+">
+
+    <label for="programName">Nombre del Programa:</label>
+    <input type="text" id="programName" required>
+
+    <label for="duration">Duración (en semestres):</label>
+    <input type="number" id="duration" required min="1">
+
+    <label for="modality">Modalidad:</label>
+    <select id="modality" required>
+      <option value="" disabled selected>Seleccione una modalidad</option>
+      <option value="presencial">Presencial</option>
+      <option value="virtual">Virtual</option>
+      <option value="semipresencial">Semipresencial</option>
+    </select>
+
+    <label for="startDate">Fecha de Inicio (Opcional):</label>
+    <input type="date" id="startDate">
+
+    <button type="submit">Registrar Programa</button>
+  </form>
+
+  <h2>Lista de Programas Académicos Registrados</h2>
+  <div id="programList"></div>
+
+  <script src="../JavaScript/GestionProgramas.js"></script>
+</body>
+</html>

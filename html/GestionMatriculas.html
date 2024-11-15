@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Matrículas</title>
+  <link rel="stylesheet" href="../css/styles3.css">
+</head>
+<body>
+  <h1>Registro de Matrículas</h1>
+  
+  <form id="enrollmentForm">
+    <label for="enrollmentId">Identificación de Matrícula (Alfanumérico):</label>
+    <input type="text" id="enrollmentId" required pattern="[A-Za-z0-9]+">
+
+    <label for="studentId">Identificación del Estudiante:</label>
+    <input type="text" id="studentId" required>
+
+    <label for="programCode">Código del Programa:</label>
+    <input type="text" id="programCode" required>
+
+    <label for="enrollmentDate">Fecha de Matrícula:</label>
+    <input type="date" id="enrollmentDate" required>
+
+    <label for="status">Estado de la Matrícula:</label>
+    <select id="status" required>
+      <option value="" disabled selected>Seleccione un estado</option>
+      <option value="activa">Activa</option>
+      <option value="en proceso">En Proceso</option>
+      <option value="finalizada">Finalizada</option>
+      <option value="cancelada">Cancelada</option>
+    </select>
+
+    <button type="submit">Registrar Matrícula</button>
+  </form>
+
+  <h2>Lista de Matrículas Registradas</h2>
+  <div id="enrollmentList"></div>
+
+  <script src="../JavaScript/GestionMatriculas.js"></script>
+</body>
+</html>
